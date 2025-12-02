@@ -1,15 +1,24 @@
 extends Node2D
 
+const DICE = preload("uid://ixvbn7ot4q3g")
+const MARGIN: float = 80.0
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	spawn_dice()
 
+func _on_spawn_timer_timeout() -> void:
+	spawn_dice()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+func spawn_dice() -> void:
+	var new_dice: Dice = DICE.instantiate()
+	var vpr: Rect2 = get_viewport_rect()
+	var new_x = randf_range(
+		vpr.position.x + MARGIN,
+		vpr.end.x - MARGIN
+	)
+	new_dice.position = Vector2(new_x, -MARGIN)
+	new_dice.game_over.connect(_on_dice_game_over)
+	add_child(new_dice)
 
 func _on_dice_game_over() -> void:
 	print("Game Over")
