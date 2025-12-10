@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d160ahcn5vijn" path="res://Scenes/Dice/Dice.gd" id="2_53oi2"]
 [ext_resource type="Shape2D" uid="uid://dajn1g8rtq43a" path="res://Resources/DiceCollisionShape.tres" id="2_p3fax"]
 
-[node name="Dice" type="Area2D"]
+[node name="Dice" type="Area2D" groups=["stoppable"]]
 script = ExtResource("2_53oi2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

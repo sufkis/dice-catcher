@@ -15,5 +15,5 @@ texture = ExtResource("1_gwu2e")
 wait_time = 2.0
 autostart = true
 
-[connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
