@@ -35,3 +35,6 @@ func pause_all() -> void:
 
 func _on_dice_game_over() -> void:
 	pause_all()
+
+func _on_fox_point_scored() -> void:
+	print("point scored")

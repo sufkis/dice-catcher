@@ -22,3 +22,4 @@ position = Vector2(591, 579)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="point_scored" from="Fox" to="." method="_on_fox_point_scored"]
